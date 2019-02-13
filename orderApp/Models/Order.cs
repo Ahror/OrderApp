@@ -9,11 +9,13 @@ namespace OrderApp.Models
     {
         public Guid OrderId { get; set; }
         public DateTime Date { get; set; }
-        public string Food { get; set; }
+        public Guid MenuId { get; set; }
+        public Menu Food { get; set; }
         public Guid Id { get; set; }
         public bool Closed { get; set; }
-        public string Prise { get; set; }
+        public int Price { get; set; }
         public int PeopleCount { get; set; }
+        public List<OrderDetail> Details { get; set; }
 
     }
 }

@@ -7,7 +7,22 @@ namespace OrderApp.Models
 {
     public class Menu
     {
-        public Guid MenuId { get; set; }
+        Guid id;
+        public Guid Id
+        {
+            get
+            {
+                if (id == null || id == Guid.Empty)
+                {
+                    id = new Guid();
+                }
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public string Name { get; set; }
         public string Description { get; set; }
 
