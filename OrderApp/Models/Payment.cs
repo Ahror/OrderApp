@@ -7,12 +7,24 @@ namespace OrderApp.Models
 {
     public class Payment
     {
-        public Guid Id { get; set; }
+        public Guid Id
+        {
+            get
+            {
+                if (Id == null || Id == Guid.Empty)
+                {
+                    Id = new Guid();
+                }
+                return Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
         public DateTime DateTime { get; set; }
         public int Amount { get; set; }
         public List<PaymentDetail> Details { get; set; }
-
-        public Guid UserId { get; set; }
         public User User { get; set; }
     }
 }

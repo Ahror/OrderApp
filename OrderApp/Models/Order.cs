@@ -7,10 +7,25 @@ namespace OrderApp.Models
 {
     public class Order
     {
+        Guid id;
+        public Guid Id
+        {
+            get
+            {
+                if (id == null || id == Guid.Empty)
+                {
+                    id = new Guid();
+                }
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public DateTime Date { get; set; }
         public Guid MenuId { get; set; }
         public Menu Food { get; set; }
-        public Guid Id { get; set; }
         public bool Closed { get; set; }
         public int Price { get; set; }
         public int PeopleCount { get; set; }

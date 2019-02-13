@@ -25,5 +25,7 @@ namespace OrderApp.Models
         public string Login { get; set; }
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
+        public List<Payment> Payments { get; set; }
+        public List<OrderDetail> Details { get; set; }
     }
 }

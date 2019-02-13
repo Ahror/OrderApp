@@ -19,23 +19,19 @@ namespace OrderApp
         {
             services.AddDbContext<OrderAppContext>(option =>
             {
-                option.UseSqlServer("Data Source=localhost;Initial Catalog=NGSilkDb; Integrated Security=True; MultipleActiveResultSets=true;");
+                option.UseSqlServer(@"Data Source=localhost;Initial Catalog=OrderAppDb; Integrated Security=True; MultipleActiveResultSets=true;");
             });
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, OrderAppContext context)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }
