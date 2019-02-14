@@ -23,11 +23,11 @@ namespace OrderApp.Models
                 id = value;
             }
         }
-        public User User { get; set; }
+        public virtual User User { get; set; }
         public DateTime OrderedDateTime { get; set; }
-        public List<PaymentDetail> Payments { get; set; }
+        public virtual List<PaymentDetail> Payments { get; set; }
         public int Amount { get; set; }
         public int Reminder { get; set; }
-        public Order Order { get; set; }
+        public virtual Order Order { get; set; }
     }
 }
