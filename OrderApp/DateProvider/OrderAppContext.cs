@@ -36,7 +36,7 @@ namespace OrderApp.DateProvider
             etBuilder.Property(o => o.Closed).HasColumnName("Closed");
             etBuilder.Property(o => o.Price).HasColumnName("Price");
             etBuilder.Property(o => o.PeopleCount).HasColumnName("PeopleCount");
-            etBuilder.HasOne(o => o.Menu).WithMany(m=>m.Orders).HasForeignKey(o=>o.MenuId);
+            etBuilder.HasOne(o => o.Food);
             etBuilder.HasMany(o => o.Details).WithOne(d => d.Order);
 
         }
@@ -48,7 +48,7 @@ namespace OrderApp.DateProvider
             etBuilder.Property(m => m.Id).HasColumnName("Id");
             etBuilder.Property(m => m.Name).HasColumnName("Name");
             etBuilder.Property(m => m.Description).HasColumnName("Description");
-            etBuilder.HasMany(m => m.Orders).WithOne(d => d.Menu);
+            etBuilder.HasMany(m => m.Orders).WithOne(d => d.Food);
         }
         void UserMapping(ModelBuilder builder)
         {

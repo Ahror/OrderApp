@@ -7,25 +7,26 @@ namespace OrderApp.Models
 {
     public class User
     {
+        Guid id;
         public Guid Id
         {
             get
             {
-                if (Id == null || Id == Guid.Empty)
+                if (id == null || id == Guid.Empty)
                 {
-                    Id = new Guid();
+                    id = new Guid();
                 }
-                return Id;
+                return id;
             }
             set
             {
-                Id = value;
+                id = value;
             }
         }
         public string Login { get; set; }
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
-        public List<Payment> Payments { get; set; }
-        public List<OrderDetail> Details { get; set; }
+        public virtual List<Payment> Payments { get; set; }
+        public virtual List<OrderDetail> Details { get; set; }
     }
 }
