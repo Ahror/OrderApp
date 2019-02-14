@@ -27,7 +27,7 @@ namespace OrderApp.Models
         public Guid MenuId { get; set; }
         public virtual Menu Menu { get; set; }
         public bool Closed { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         public int PeopleCount { get; set; }
         public virtual List<OrderDetail> Details { get; set; }
 
