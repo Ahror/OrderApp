@@ -31,7 +31,7 @@ namespace OrderApp
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMvc();
         }
     }
 }
