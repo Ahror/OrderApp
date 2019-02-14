@@ -25,7 +25,7 @@ namespace OrderApp.Models
         }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<Order> Orders { get; set; }
+        public virtual List<Order> Orders { get; set; }
 
 
     }
