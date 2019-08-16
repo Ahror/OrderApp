@@ -1,10 +1,7 @@
-﻿using OrderApp.DateProvider;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using OrderApp.Common.Models;
 
-namespace OrderApp.Models
+namespace OrderApp.DateProvider
 {
     public class DemoData
     {

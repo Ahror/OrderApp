@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OrderApp.DateProvider;
-using OrderApp.Models;
 using System;
 using System.Linq;
+using OrderApp.Common.Models;
 
 namespace OrderApp.Controllers
 {
