@@ -111,6 +111,9 @@
     <PackageReference Include="ReactiveUI">
       <Version>9.20.1</Version>
     </PackageReference>
+    <PackageReference Include="ReactiveUI.WPF">
+      <Version>9.20.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

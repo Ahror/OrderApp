@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Net.Http;
+using System.Windows;
 using OrderApp.Core.ViewModels;
 
 namespace OrderApp.Wpf.Pages

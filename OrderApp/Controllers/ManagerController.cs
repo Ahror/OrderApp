@@ -161,7 +161,7 @@ namespace OrderApp.Controllers
                 return Ok("Food is added to the menu.");
             }
         }
-        [HttpPost("AddUser/{userLogin}/{userPassword}")]
+        [HttpGet("AddUser/{userLogin}/{userPassword}")]
         public IActionResult AddUser(string userLogin,string userPassword)
         {
             var user = db.Users.FirstOrDefault(m => m.Login  == userLogin);

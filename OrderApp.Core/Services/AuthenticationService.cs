@@ -13,7 +13,7 @@ namespace OrderApp.Core.Services
         }
         public async Task<bool> LoginAsync(string login, string password)
         {
-            var path = $"api/manager/{login}/{password}";
+            var path = $"api/manager/adduser/{login}/{password}";
             var httpResponseMessage = await _httpClient.GetAsync(path);
             return httpResponseMessage.IsSuccessStatusCode;
         }
